@@ -1,4 +1,4 @@
-package com.xmm.architecture.mvvm;
+package com.xmm.architecture.databinding;
 
 import androidx.lifecycle.ViewModel;
 

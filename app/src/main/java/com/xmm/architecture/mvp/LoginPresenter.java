@@ -29,6 +29,7 @@ public class LoginPresenter implements IPresenter {
 
     @Override
     public void login(String name, String pass) {
+        mUser.getUsername();
         loginView.showProgress();
         new Handler().postDelayed(new Runnable() {
             @Override

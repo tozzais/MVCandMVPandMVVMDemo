@@ -1,7 +1,6 @@
-package com.xmm.architecture.mvvm;
+package com.xmm.architecture.databinding;
 
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -14,10 +13,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
-import com.xmm.architecture.MainActivity;
 import com.xmm.architecture.R;
 import com.xmm.architecture.UserModel;
-import com.xmm.architecture.databinding.ActivityMainMvvmBinding;
 
 import java.lang.ref.WeakReference;
 

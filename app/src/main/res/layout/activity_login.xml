@@ -4,14 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data >
-        <import type="com.xmm.architecture.databinding.MVVMActivity.UserPresenter"/>
-        <import type="com.xmm.architecture.databinding.StringUtils"/>
+
         <variable
-            name="user"
-            type="com.xmm.architecture.UserModel" />
-        <variable
-            name="userPresenter"
-            type="UserPresenter" />
+            name="vm"
+            type="com.xmm.architecture.mvvm1.viewmodel.LoginViewModel" />
+
     </data>
 
 
@@ -28,8 +25,7 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:hint="用户名"
-            android:text="@{StringUtils.toUpperCase(user.username)}"
-            android:afterTextChanged="@{userPresenter.afterTextChanged}"
+            android:text="@={vm.userName}"
             />
 
         <EditText
@@ -40,7 +36,7 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/et_name"
-            android:text="@{user.password}"
+            android:text="@={vm.password}"
 
             />
 
@@ -48,7 +44,7 @@
             android:id="@+id/tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{user.price}"
+            android:text="@{vm.uid}"
 
             app:layout_constraintTop_toBottomOf="@+id/et_pass"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -60,38 +56,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="登录"
+            android:onClick="@{()->vm.login()}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/tv_btn1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="改变属性"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toRightOf="@+id/tv_login"
-            app:layout_constraintTop_toTopOf="parent" />
 
-
-
-        <Button
-            android:id="@+id/tv_btn2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="打印属性"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toRightOf="@+id/tv_btn1"
-            app:layout_constraintTop_toTopOf="parent" />
-        <Button
-            android:id="@+id/tv_btn3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="绑定点击事件"
-            android:onClick="@{()->userPresenter.onUserNameClick(user)}"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toRightOf="@+id/tv_btn2"
-            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
