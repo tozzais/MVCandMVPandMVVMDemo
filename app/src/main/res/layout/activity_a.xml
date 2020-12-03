@@ -25,15 +25,6 @@
         app:layout_constraintTop_toBottomOf="@+id/et_name"
         />
 
-    <TextView
-        android:id="@+id/tv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_pass"
-        />
-
 
 
     <Button
@@ -45,14 +36,5 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/tv_login1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="启动B"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_login" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
