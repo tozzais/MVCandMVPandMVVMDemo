@@ -1,5 +1,8 @@
 package com.xmm.architecture;
 
+import androidx.annotation.NonNull;
+import androidx.lifecycle.Lifecycle;
+
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -12,6 +15,21 @@ import static org.junit.Assert.*;
 public class ExampleUnitTest {
     @Test
     public void addition_isCorrect() {
-        assertEquals(4, 2 + 2);
+        State state = State.TWO;
+        System.out.println(state.isAtLeast(State.ONE));
+        System.out.println(state.isAtLeast(State.TWO));
+        System.out.println(state.isAtLeast(State.THREE));
+
+
+    }
+    public enum State{
+
+        THREE,
+        TWO,
+        ONE;
+        public boolean isAtLeast(State state) {
+            return compareTo(state) >= 0;
+        }
+
     }
 }
